@@ -1,1 +1,2 @@
-When would you want to create
+When would you want to use a remote repo rather than keeping all your work local?
+A. when you are not working on your own machine, or the cloud.
