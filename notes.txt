@@ -1,11 +1,71 @@
 # to get color differences when using diff:
 git config --global color.ui auto
-# to clone a repo (all files and history) to your machine
+# to clone a repo (get all files and history) to your machine from GitHub
 git clone <url>
 # to review previous commits
 git log --stat
 # to get differences among version
 git diff key1 key2 (get keys from log)
+git clone <url>
+#Errors
+#Octopus is a stragey used by git to combine different versions of code (gives warning if done inappropriately)
+#Head is thre commit you are currently working on. Can dtach head by switching to a previous commit.
+
+#to restore a previous version (change back to another commit), git checkout
+git checkout <commitID>
+
+# if working on your machine and have a bunch of files in existing directory
+ls -a  # to see files
+git init # to intialize a git repo
+ls -a #showns .git but no commits at this point
+git log # to see if any commits - if not, get error
+git status # shows which files have changed, the branch you are on, etc.
+
+# adding changes to a repo is done by putting things in the staging area
+git status
+git add file.txt  #adds files to staging area
+git status # showns files in staging are that are to be committed
+git commit -m "message - to be like a command"
+
+git diff #to compare working dir to staging area - do this before adding to staging area
+git diff --staged  # compare staging area  and most recent commit - do just before committing
+git diff commit1 commit2 # compares 2 commits
+git reset --hard  #gets rid of any changes in staged area (IRREVERSIBLE!)
+
+git branch # shows current branches and stars which one you are on
+git branch branch_name (or commit ID) #creates branch
+git checkout branch_name  # changes over to new branch
+git checkout -b new_branch_name #creates a new branch to retain commits made (eg when you checkout a commitID instead of a branch and now want to create a branch instead of a ccommit)
+
+#Branching
+#master is the main branch, but other branches can be named, worked on and then later merged back into the main branch
+git branch #shows current branch
+git branch branch_name #creates new branch
+git branch # to see available and current branches
+git checkout branch_name # puts you on the named branch
+#after making chang to a file
+git diff #compares working dir and staging area
+git add file.txt
+git commit -m "message"
+
+git log --graph --oneline master coins #to visualize branch structure of master and coins branches
+
+git checkout -b new_branch_name # creates and checks out a new branch
+#---------OR do the two commands below to achieve the same thing-------
+git branch new_branch_name
+git checkout new_branch_name
+
+# to combine or MERGE changes from multiple branches:
+# e.g. merge extra branch into master
+# 1. make sure you checkout the master branch
+git merge master extra_branch  # reatES MERGED VERSION, MESSAGE POPS UP WITH DEFAULT MESSAGE - extra_branch gets merged into master so long as you have checkedout master.
+git branch -d coins #gets rid of coins branch
+git log # to see merge commit
+git show commit_id  # shows changes of commit compared to its parent (without knowing the parent id)
+# HOWEVER, if there is a CONFLICT, this must be resolved manually
+git log -n 1 only shows one commit.
+
+#=======================
 #setting up workspace
 #enable tab completion: git-completion.bash
 #enable git features: git-prompt.sh 

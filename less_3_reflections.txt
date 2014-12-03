@@ -1,2 +1,13 @@
-When would you want to use a remote repo rather than keeping all your work local?
-A. when you are not working on your own machine, or the cloud.
+Q1. When would you want to use a remote repo rather than keeping all your work local?
+A1. when you are not working on your own machine, or the cloud.
+
+Q2. Why might you want to always pull changs manually rather than have Git automatically stay up to date with your remote repo?
+A2. You may not want your changes to go public, and therefore should decide when you would like that to happen.
+
+Q3. Describe differences between forks, clones and branches?  When do you use one instead of another?
+forks - when you want a copy of another persons repo on GitHub, to turn up on your GitHub page
+clones - when you want to clone a GitHub repo on your local machine (or remotely)
+branch - only occur within a single repo.
+
+Q4. What is the benefit of having a copy of the lsat known state of the remote stored locally?
+A4. A local copy of last known state allows you to see what new changes may have been made.
