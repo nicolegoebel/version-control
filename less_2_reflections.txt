@@ -1,0 +1,5 @@
+What happens when you initalize a repo? Why do you need to do it?
+- when you initialize a repo it adds a .git file which keeps track of your versions.
+
+How is staging area diffrent from working dir and repo?  What value does it offer?
+- the staging area prepares the files to be committed. It allows you to view which files you are going to commit, before preparing the instructuions/comment.
