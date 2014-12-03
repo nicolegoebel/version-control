@@ -1,0 +1,48 @@
+# to get color differences when using diff:
+git config --global color.ui auto
+# to clone a repo (all files and history) to your machine
+git clone <url>
+# to review previous commits
+git log --stat
+# to get differences among version
+git diff key1 key2 (get keys from log)
+#setting up workspace
+#enable tab completion: git-completion.bash
+#enable git features: git-prompt.sh 
+#bash_profile contains configuration for the terminal. bash_profile_course
+#   source ~/git-completion.bash enables tab completion
+#set vi as default editor...
+#for sublime, add a shortcut to bash profile:
+#mv .bash_profile bash_profile
+#go to homedir select file bash_profile and add line:
+#alias subl="/Applications/Sublime\ Text\2.app/Contents/SharedSupport/bin/subl"
+#add dot back mv bash_profile .bash_profile
+#now configure git to use sublime:  git config --global core.editor "subl -n -w"#git config --global core.editor "subl -n -w" #change for VIM!!!
+#installing awesome version of vim:
+#git clone git://github.com/amix/vimrc.git ~/.vim_runtime
+#sh ~/.vim_runtime/install_awesome_vimrc.sh
+#to update this:
+#cd ~/.vim_runtime
+#git pull --rebase
+#see:  https://github.com/amix/vimrc  for more.
+#
+#git config --global push.default upstream
+#git config --global merge.conflictstyle diff3
+
+REFLECTIONS
+I will be able to make notes about why one version is different from another.
+ 
+Pros and cons of manually choosing when to create a commit versus autosave.
+ - differences in versions are meaningful and eaier to track
+ 
+Why do some VC systems like Git allow saving multiple files in one commit       (whereas others like Google docs treats each file separately):  because the     files are often dependent on one another.
+ 
+Using git log and git diff to view history of files:  use git log to get the   keys for each commit of interest and git diff key1 key2 to view their           diffrences!
+ -  this allows you to learn what changes have been made in the files.
+ 
+ How might using VC make you more confident to make changes that could break     something?  You would not hesitate to continue making changes since you can     always go back to the original! Allows you to go exploring!!
+ 
+What do you want to try using Git for?
+ 
+
+
