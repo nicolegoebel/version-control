@@ -11,10 +11,10 @@ Pros and cons of manually choosing when to create a commit versus autosave.
 
 Why do some VC systems like Git allow saving multiple files in one commit (whereas others like Google docs treats each file separately):  because the files are often dependent on one another.
 
-UYinsg git log and git diff to view history of files:  use git log to get the keys for each commit of interest and git diff key1 key2 to view their diffrences!
+Using git log and git diff to view history of files:  use git log to get the keys for each commit of interest and git diff key1 key2 to view their diffrences!
 -  this allows you to learn what changes have been made in the files.
 
 How might using VC make you more confident to make changes that could break something?  You would not hesitate to continue making changes since you can always go back to the original! Allows you to go exploring!!
 
 What do you want to try using Git for?
-
+programming and debugging!

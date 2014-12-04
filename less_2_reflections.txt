@@ -16,10 +16,8 @@ How to combine changes from multiple branches into single version.
 git merge master other_branch
 git show commit_id - to show changs of a commit compared to its parent, without having to know the parent id.
 
-What is the result of merging 2 branches together?  Why do we represent it in a digram the way we do?
+What is the result of merging 2 branches together?  Why do we represent it in a diagram the way we do?
 - brings all changes together, after testing them separately.
 
 What are the pros and cons of Gits automatic merging versus always doing merges manually?
 - manual merges allows you to check and ensure that you are merging what you want/think you are merging. If it was automated all the time, Git may have to guess at some of the merge and therefore could be incorrect, introducing errors.
-
-
