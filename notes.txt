@@ -65,6 +65,78 @@ git show commit_id  # shows changes of commit compared to its parent (without kn
 # HOWEVER, if there is a CONFLICT, this must be resolved manually
 git log -n 1 only shows one commit.
 
+#syncing repos
+git init  #initialize 
+git remote # shows remotes
+git remote ad origin <url>. #to add a remote
+git remote -v  # for verbose to see urls to/from remote
+git push origin master  # git push <remote> <branch>
+
+#Forking a repo - get anothers repon into GitHub (liek a clone but GitHub does it for you)
+git clone <url> # to pull down to your machine
+# branches occur on single repo
+# clones take existing repo and make another - van be done locally or remotely
+# fork is a clon of repo from github to another's github
+#
+#Collaborations can cauase conflict
+#Merging local and remote branches (eg when collaborator makes a change on fork at the same tim eyou make a local change to same file
+#When you clone a rep, you get a local branch called master, as well as a local copy of the last known position of tha tbranch in the reomote (orign/master - local).
+#When push, both local and Github get updated
+#But if there is a conflict, update local copy with 
+git fetch # updates local copy
+git log 
+git diff # to see difference of changes
+git merge master master/origin # merge local changes with github
+
+git pull origin master == git getch origin + git merge master origin/master (git merge GitHub local)
+
+#if there are conflicts with the merge, open file and resolove, and then
+git add file.txt
+git commit
+git push origin master (or git pull origin master)
+#
+#Fast Forward merges
+#if git pull origin =mgit fetch git merge why havent previous pulls generated merge commits? - FFM merges 2 commits where one is in the same path as the other
+#
+#Pull request
+git branch new-branch
+git checkout new-branch
+git add file.txt
+git commit -m "mssage"
+git push origin new-branch
+#to make a pull request on GitHub (request someone pull their branch into anothers repo)
+1. go to repo and the branch
+2. create a pull request
+3. change base of fork accordingly (the branch to which request is to be pulled to)
+4. click "create pull request" at bottom which sends email to person.
+
+git pull origin master #gets another persons changes into my local repo
+(or git fetch (to examine changes) followed by git merge origin/master master)
+git checkout new-branch
+git merge master new-branch #to incorporate changes into new-branch
+- resolve conflict - 
+git add file.txt
+git commit
+git log
+git push origin new-branch
+
+# in this case you made a change to a recently cloned repo file, but when you went to push your changes, someone else also made a change to that file. You need to create an upstream remote so that you can get their change, and mrege their master branch into your changed branch (3), and THEN you can finally push your changed branch to your fork.
+#1. add original repo as a remote in your clone
+git remote add upstream <url>
+#2. pull master branch from original repo
+git checkout master
+git pull upstream master
+#3. merge master branch into your change branch
+git checkout stop-drop-roll
+git merge master stop-drop-roll
+#-resolve any conflicts-
+git add file.md
+git commit
+git push origin stop-drop-roll  (git push myfork stop-drop-roll)
+# push to master for completion
+git checkout master
+git push
+
 #=======================
 #setting up workspace
 #enable tab completion: git-completion.bash
