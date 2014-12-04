@@ -15,3 +15,5 @@ A4. A local copy of last known state allows you to see what new changes may have
 Q5. How would you collaborate without Git/Hub? What would be easier?  What would be harder?
 A5. I might collaborate with Dropbox sharing. But this is harder to keep track of the order of changes and merges. One should only allow a single person to work on the file at a time, rather than simultaneously!  However, it is more straightforward for people who do not understand how to use GitHub/Git.
 
+Q6. When would you want to make changes in a separate branch rather than directly in master? What benefits does each approach have?
+A6. Making changes in a separate branch allows for experimentation, whereas continuing along master provides more continuity.
